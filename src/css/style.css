@@ -50,6 +50,7 @@ body {
 .card__header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .header__number {
   margin-left: 0.2rem;
@@ -66,6 +67,8 @@ body {
 .header__title {
   font-weight: bold;
   color: var(--dark-blue-color);
+  display: flex;
+  align-items: center;
 }
 .header__date {
   font-size: 0.8rem;
@@ -88,6 +91,7 @@ body {
 .user__info {
   display: flex;
   align-items: center;
+  column-gap: 0.5rem;
 }
 
 .user__info .image-container {
@@ -101,7 +105,6 @@ body {
 }
 .user__name {
   font-weight: bold;
-  margin-right: 0.5rem;
 }
 .user__btn {
   outline: none;
