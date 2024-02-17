@@ -1,0 +1,123 @@
+/* reset */
+*,
+*::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* variables */
+:root {
+  --dark-blue-color: #234894;
+  --light-blue: #afcedd;
+  --green-color: #219f95;
+  --black-color: #1e1e1e;
+  --gray-color: #696969;
+  --white-color: #fff;
+  --border: 10px;
+}
+
+body {
+  font-size: 62.5%;
+  background-color: #f3f4f6;
+}
+.wrapper {
+  max-width: 1536px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container {
+  padding: 1rem;
+  font-size: 1rem;
+}
+.content-header {
+  margin-bottom: 2rem;
+}
+.content-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+.card {
+  width: 100%;
+  height: auto;
+  padding: 0.5rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-color);
+}
+.card__header {
+  display: flex;
+  justify-content: space-between;
+}
+.header__number {
+  margin-left: 0.2rem;
+  color: var(--dark-blue-color);
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: var(--light-blue);
+  padding: 0.5rem;
+  border-radius: var(--border);
+  text-align: center;
+  font-weight: bold;
+}
+.header__title {
+  font-weight: bold;
+  color: var(--dark-blue-color);
+}
+.header__date {
+  font-size: 0.8rem;
+  color: var(--gray-color);
+}
+.card__detail {
+  margin-top: 0.7rem;
+}
+.card__detail > h3 {
+  font-size: 1.2rem;
+}
+.card__detail > span {
+  font-size: 0.7rem;
+}
+.card__user {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+.user__info {
+  display: flex;
+  align-items: center;
+}
+
+.user__info .image-container {
+  width: 40px;
+  height: 40px;
+}
+.image-container > img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border);
+}
+.user__name {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+.user__btn {
+  outline: none;
+  border: none;
+  padding: 0.5rem 0.7rem;
+  color: var(--white-color);
+  background-color: var(--green-color);
+  border-radius: var(--border);
+}
+@media screen and (min-width: 768px) {
+  .content-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
